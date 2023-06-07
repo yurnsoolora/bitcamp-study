@@ -1,7 +1,7 @@
 package bitcamp.myapp.handler;
 
 import bitcamp.util.Prompt;
-
+//
 public class MemberHandler {
 
   static final int MAX_SIZE = 100;
