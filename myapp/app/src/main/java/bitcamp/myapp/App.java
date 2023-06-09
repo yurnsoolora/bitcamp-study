@@ -4,7 +4,7 @@ import bitcamp.myapp.handler.MemberHandler;
 import bitcamp.util.Prompt;
 
 public class App {
-
+  
   public static void main(String[] args) {
 
     printTitle();
@@ -12,23 +12,24 @@ public class App {
     printMenu();
 
     while (true) {
-      String menuNo = Prompt.inputString("메인> ");
+      String menuNo = Prompt.inputString("> ");
       if (menuNo.equals("6")) {
         break;
       } else if (menuNo.equals("menu")) {
         printMenu();
-      } else if (menuNo.equals("1")) {
-        MemberHandler.inputMember();
-      } else if (menuNo.equals("2")) {
-        MemberHandler.printMembers();
-      } else if (menuNo.equals("3")) {
-        MemberHandler.viewMember();
-      } else if (menuNo.equals("4")) {
-        MemberHandler.updateMember();
       } else {
         System.out.println(menuNo);
       }
     }
+
+    // while (MemberHandler.available()) {
+    //   MemberHandler.inputMember();
+    //   if (!promptContinue()) {
+    //     break;
+    //   }
+    // }
+
+    // MemberHandler.printMembers();
 
     Prompt.close();
   }
