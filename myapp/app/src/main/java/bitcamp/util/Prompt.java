@@ -18,4 +18,5 @@ public class Prompt {
   public static void close() {
     scanner.close();
   }
+
 }
